@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>HubSpot GTM Enhanced Events – Example</title>
+    <script>
+      // Mock dataLayer for local testing
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push = function (e) {
+        console.log("dataLayer event:", e);
+        return Array.prototype.push.call(this, e);
+      };
+    </script>
+    <script src="../src/hubspot-gtm-enhanced-events.js"></script>
+  </head>
+  <body>
+    <h1>HubSpot GTM Enhanced Events – Local Test</h1>
+
+    <p>Open your browser console and click the buttons below to see the normalized events.</p>
+
+    <button
+      onclick="HubSpotGTMEnhancedEvents.onFormView({formId:'test-form', formName:'Test Form', portalId:'123456', target:'#hs-form-test'})"
+    >
+      Simulate Form View
+    </button>
+
+    <button
+      onclick="HubSpotGTMEnhancedEvents.onFormSubmitted({formId:'test-form', formName:'Test Form', portalId:'123456', target:'#hs-form-test', lifecycleStage:'lead'})"
+    >
+      Simulate Form Submit
+    </button>
+
+    <button
+      onclick="HubSpotGTMEnhancedEvents.onMeetingBooked({meetingLink:'https://meetings.example/demo', meetingTitle:'Demo Call', ownerEmail:'rep@example.com'})"
+    >
+      Simulate Meeting Booked
+    </button>
+
+    <button
+      onclick="HubSpotGTMEnhancedEvents.onChatStarted({channel:'web', threadId:'thread-001'})"
+    >
+      Simulate Chat Started
+    </button>
+
+    <button
+      onclick="HubSpotGTMEnhancedEvents.onChatConverted({channel:'web', threadId:'thread-001', conversionType:'lead'})"
+    >
+      Simulate Chat Converted
+    </button>
+
+    <button
+      onclick="HubSpotGTMEnhancedEvents.onCtaClick({ctaId:'cta-123', label:'Book Now', url:'https://example.com/pricing'})"
+    >
+      Simulate CTA Click
+    </button>
+  </body>
+</html>

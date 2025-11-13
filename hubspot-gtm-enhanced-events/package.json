@@ -1,0 +1,22 @@
+{
+  "name": "hubspot-gtm-enhanced-events",
+  "version": "0.1.0",
+  "description": "Portable GTM module that normalizes HubSpot form, chat, meeting, and CTA events into a clean dataLayer schema.",
+  "main": "src/hubspot-gtm-enhanced-events.js",
+  "scripts": {
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "keywords": [
+    "hubspot",
+    "google-tag-manager",
+    "gtm",
+    "ga4",
+    "analytics",
+    "forms",
+    "meetings",
+    "chat",
+    "cta"
+  ],
+  "author": "",
+  "license": "MIT"
+}

@@ -1,0 +1,12 @@
+{
+  "template": "hubspot-gtm-enhanced-events",
+  "description": "Loads the HubSpot GTM Enhanced Events script and exposes normalized events for forms, chat, meetings, and CTAs.",
+  "version": "0.1.0",
+  "notes": "Import this as a custom template in GTM and map event parameters to GA4 or other tags.",
+  "author": "",
+  "homepage": "",
+  "permissions": [],
+  "parameters": [],
+  "fields": {},
+  "code": "// Paste the contents of src/hubspot-gtm-enhanced-events.js into the GTM template code editor.\n"
+}
